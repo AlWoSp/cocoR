@@ -30,7 +30,7 @@ using System.IO;
 using System.Text;
 using System.Collections;
 
-namespace at.jku.ssw.Coco {
+namespace at.jku.ssw.Coco;
 
 //-----------------------------------------------------------------------------
 //  State
@@ -995,7 +995,7 @@ public class DFA {
 		if (tab.nsName != null && tab.nsName.Length > 0) {
 			gen.Write("namespace ");
 			gen.Write(tab.nsName);
-			gen.Write(" {");
+			gen.Write(";");
 		}
 		g.CopyFramePart("-->declarations");
 		gen.WriteLine("\tconst int maxT = {0};", tab.terminals.Count - 1);
@@ -1042,7 +1042,6 @@ public class DFA {
 		for (State state = firstState.next; state != null; state = state.next)
 			WriteState(state);
 		g.CopyFramePart(null);
-		if (tab.nsName != null && tab.nsName.Length > 0) gen.Write("}");
 		gen.Close();
 	}
 	
@@ -1060,5 +1059,3 @@ public class DFA {
 	}
 	
 } // end DFA
-
-} // end namespace

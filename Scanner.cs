@@ -29,7 +29,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
-namespace at.jku.ssw.Coco {
+namespace at.jku.ssw.Coco;
 
 public class Token {
 	public int kind;    // token kind
@@ -566,5 +566,3 @@ public class Scanner {
 	public void ResetPeek () { pt = tokens; }
 
 } // end Scanner
-
-}

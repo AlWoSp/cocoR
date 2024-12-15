@@ -30,7 +30,7 @@ using System.IO;
 using System.Collections;
 using System.Text;
 
-namespace at.jku.ssw.Coco {
+namespace at.jku.ssw.Coco;
 
 public class ParserGen {
 
@@ -354,7 +354,7 @@ public class ParserGen {
 		g.CopyFramePart("-->namespace");
 		/* AW open namespace, if it exists */
 		if (tab.nsName != null && tab.nsName.Length > 0) {
-			gen.WriteLine("namespace {0} {{", tab.nsName);
+			gen.WriteLine("namespace {0};", tab.nsName);
 			gen.WriteLine();
 		}
 		g.CopyFramePart("-->constants");
@@ -368,8 +368,6 @@ public class ParserGen {
 		g.CopyFramePart("-->initialization"); InitSets();
 		g.CopyFramePart("-->errors"); gen.Write(err.ToString());
 		g.CopyFramePart(null);
-		/* AW 2002-12-20 close namespace, if it exists */
-		if (tab.nsName != null && tab.nsName.Length > 0) gen.Write("}");
 		gen.Close();
 		buffer.Pos = oldPos;
 	}
@@ -393,5 +391,3 @@ public class ParserGen {
 	}
 
 } // end ParserGen
-
-} // end namespace

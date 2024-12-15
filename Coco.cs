@@ -43,7 +43,7 @@ Coco/R itself) does not fall under the GNU General Public License.
 using System;
 using System.IO;
 
-namespace at.jku.ssw.Coco {
+namespace at.jku.ssw.Coco;
 
 public class Coco {
 		
@@ -120,5 +120,3 @@ public class Coco {
 	}
 		
 } // end Coco
-
-} // end namespace

@@ -30,9 +30,7 @@ using System.IO;
 
 using System;
 
-namespace at.jku.ssw.Coco {
-
-
+namespace at.jku.ssw.Coco;
 
 public class Parser {
 	public const int _EOF = 0;
@@ -823,5 +821,4 @@ public class Errors {
 
 public class FatalError: Exception {
 	public FatalError(string m): base(m) {}
-}
 }

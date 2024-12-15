@@ -30,7 +30,7 @@ using System.IO;
 using System.Text;
 using System.Collections;
 
-namespace at.jku.ssw.Coco {
+namespace at.jku.ssw.Coco;
 
 public class Position {  // position of source code stretch (e.g. semantic action, resolver expressions)
 	public readonly int beg;      // start relative to the beginning of the file
@@ -1214,5 +1214,3 @@ public class Tab {
 	}
 
 } // end Tab
-
-} // end namespace
